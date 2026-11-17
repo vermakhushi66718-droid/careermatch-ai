@@ -53,7 +53,7 @@ async function main() {
   await prisma.user.upsert({
     where: { email },
     create: { email, fullName: "CareerMatch Admin", role: "ADMIN", emailVerified: true, onboardingComplete: true, passwordHash: await bcrypt.hash(password, 12), profile: { create: {} } },
-    update: { role: "ADMIN" },
+    update: { role: "ADMIN", passwordHash: await bcrypt.hash(password, 12) },
   });
   console.log(`Admin ready: ${email}`);
 
