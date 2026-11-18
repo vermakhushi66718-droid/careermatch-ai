@@ -2,10 +2,13 @@ import { env } from "../../config/env";
 import { AnthropicProvider } from "./anthropic";
 import { OpenAIProvider } from "./openai";
 import { LLMProvider } from "./provider";
+import { GeminiProvider } from "./gemini";
 
 const factories: Record<string, () => LLMProvider> = {
   anthropic: () => new AnthropicProvider(),
   openai: () => new OpenAIProvider(),
+  gemini: () => new GeminiProvider(), 
+
 };
 
 let active: LLMProvider | null = null;

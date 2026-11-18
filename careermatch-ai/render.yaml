@@ -27,6 +27,8 @@ services:
       - key: SEED_ON_START
         value: "true"                # loads the admin account + demo listings (idempotent)
       - key: AI_PROVIDER
-        value: anthropic
-      - key: ANTHROPIC_API_KEY
-        sync: false                  # paste your key in the dashboard; AI features stay off until set
+        value: gemini
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: GEMINI_MODEL
+        value: gemini-2.5-flash                 # paste your key in the dashboard; AI features stay off until set
