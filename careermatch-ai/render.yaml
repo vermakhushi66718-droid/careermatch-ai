@@ -23,12 +23,12 @@ services:
       - key: ADMIN_EMAIL
         value: admin@careermatch.local
       - key: ADMIN_PASSWORD
-        generateValue: true          # read it in the Render dashboard > Environment
+        generateValue: true          
       - key: SEED_ON_START
-        value: "true"                # loads the admin account + demo listings (idempotent)
+        value: "true"                
       - key: AI_PROVIDER
         value: gemini
       - key: GEMINI_API_KEY
         sync: false
       - key: GEMINI_MODEL
-        value: gemini-2.5-flash                 # paste your key in the dashboard; AI features stay off until set
+        value: gemini-3.8-flash               

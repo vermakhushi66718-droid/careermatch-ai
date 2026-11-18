@@ -16,7 +16,7 @@ const schema = z.object({
   OPENAI_API_KEY: z.string().optional().default(""),
   OPENAI_MODEL: z.string().default("gpt-4o-mini"),
   GEMINI_API_KEY: z.string().optional().default(""),
-  GEMINI_MODEL: z.string().default("gemini-2.5-flash"),
+  GEMINI_MODEL: z.string().default("gemini-3.8-flash"),
   EMAIL_TRANSPORT: z.enum(["console", "smtp"]).default("console"),
   SMTP_HOST: z.string().optional().default(""),
   SMTP_PORT: z.coerce.number().default(587),
